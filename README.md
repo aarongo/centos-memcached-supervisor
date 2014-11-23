@@ -1,5 +1,6 @@
 centos-memcached-supervisor
 ===========================
+docker pull centos-memcached-supervisor
 
 docker-supervisor-memcache 
 -----------------------------------
