@@ -1,6 +1,5 @@
 FROM centos:centos6
 MAINTAINER  aaron "aaron.docker@gmail.com"
-
 #Install supervisor
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN yum -y update  && yum -y install python-pip && /usr/bin/pip install supervisor
