@@ -12,8 +12,6 @@ RUN yum install -y openssh-server && sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/
 RUN echo "root:pasword" | chpasswd && echo "root   ALL=(ALL)       ALL" >> /etc/sudoers
 RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 RUN mkdir /var/run/sshd
-
-
 #Install libevent
 RUN yum -y install wget && yum -y install tar && yum -y install gcc && yum -y install perl-Test-Harness
 RUN wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz &&\
