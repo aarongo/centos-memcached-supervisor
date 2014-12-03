@@ -6,7 +6,6 @@ RUN yum -y update  && yum -y install python-pip && /usr/bin/pip install supervis
 RUN mkdir -p /etc/supervisor/conf.d && mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisord.conf
 VOLUME /var/log/supervisor
-
 #install sshd 
 RUN yum install -y openssh-server && sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 # select root pasword
